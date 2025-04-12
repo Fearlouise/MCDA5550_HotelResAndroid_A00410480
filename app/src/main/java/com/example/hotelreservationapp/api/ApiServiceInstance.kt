@@ -10,7 +10,7 @@ object ApiServiceInstance {
     private const val BASE_URL = "https://hotel-res-3629510bc337.herokuapp.com/"
 
     private val loggingInterceptor = HttpLoggingInterceptor().apply {
-        level = HttpLoggingInterceptor.Level.BODY // 👈 Logs headers + body (FULL)
+        level = HttpLoggingInterceptor.Level.BODY
     }
 
     private val client = OkHttpClient.Builder()
@@ -21,7 +21,7 @@ object ApiServiceInstance {
         Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
-            .client(client) // 👈 add the custom client with logger
+            .client(client)
             .build()
             .create(ApiService::class.java)
     }

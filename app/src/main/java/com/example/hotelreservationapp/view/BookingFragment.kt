@@ -110,7 +110,6 @@ class BookingFragment : Fragment() {
                         val reservationId = reservationResponse.id
                         val confirmationNumber = reservationResponse.reservationNumber
 
-                        // ✅ FIX: set the reservation details for confirmation screen
                         reservationViewModel.setCheckInDate(formattedCheckIn)
                         reservationViewModel.setCheckOutDate(formattedCheckOut)
                         reservationViewModel.setGuestCount(guestCount)

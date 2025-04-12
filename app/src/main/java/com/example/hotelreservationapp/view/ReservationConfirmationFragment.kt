@@ -32,7 +32,6 @@ class ReservationConfirmationFragment : Fragment() {
             binding.confirmationMessageText.text = message
         }
 
-        // ✅ Observe and set check-in, check-out, guest count
         reservationViewModel.checkInDate.observe(viewLifecycleOwner) { checkIn ->
             binding.checkInText.text = "Check-in Date: $checkIn"
         }
