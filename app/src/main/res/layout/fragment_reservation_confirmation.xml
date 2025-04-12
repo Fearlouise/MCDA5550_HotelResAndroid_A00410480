@@ -1,0 +1,93 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.hotelreservationapp.viewmodel.ReservationViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="?android:colorBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="32dp">
+
+            <ImageView
+                android:id="@+id/thumbsUpImage"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginBottom="24dp"
+                android:src="@drawable/thumbs_up_icon"
+                android:contentDescription="Thumbs up"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reservation Confirmed!"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/deep_navy"
+                android:textSize="28sp"
+                style="@style/HeaderText"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/checkInText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{"Check-in Date: " + viewModel.checkInDate}'
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                style="@style/BodyText"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/checkOutText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{"Check-out Date: " + viewModel.checkOutDate}'
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                style="@style/BodyText"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/guestCountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{"Number of Guests: " + viewModel.guestCount}'
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                style="@style/BodyText"
+                android:layout_marginTop="8dp" />
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="1dp"
+                android:background="@color/deep_navy"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:id="@+id/confirmationMessageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                android:textSize="18sp"
+                android:textColor="@color/deep_navy"
+                android:fontFamily="@font/montserrat_bold"
+                style="@style/BodyText" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

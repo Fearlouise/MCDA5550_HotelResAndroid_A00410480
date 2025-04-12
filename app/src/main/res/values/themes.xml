@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App theme -->
+    <style name="Theme.HotelReservationApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/sea_glass</item>
+        <item name="colorPrimaryVariant">@color/mediterranean_teal</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+
+        <!-- Secondary color / Accent -->
+        <item name="colorAccent">@color/terracotta</item>
+
+        <!-- Background -->
+        <item name="android:colorBackground">@color/villa_white</item>
+
+    </style>
+
+</resources>

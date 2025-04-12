@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HotelReservationApp</string>
+    <string name="available">Available</string>
+    <string name="unavailable">Unavailable</string>
+</resources>
